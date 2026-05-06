@@ -38,9 +38,12 @@ A confidence threshold of 0.70 is applied — the motor only activates when the 
 - bq24074 LOAD → Arduino VIN (via slide switch)
 - Arduino 3.3V → Motor VCC
 - Arduino GND → Motor GND
-- Arduino D9 → Motor SIG
+- Arduino D9 → Motor IN
 
-
+<p align="center">
+  <img src="Images/Wiring_schematic_view.png" width="70%" alt="Device wiring schematic" /><br>
+  <sub>Device wiring schematic</sub>
+</p>
 
 **Estimated battery life:** ~83 hours assuming emergency sounds occur 10% of operating time (9mA idle, up to 39mA when motor fires).
 
