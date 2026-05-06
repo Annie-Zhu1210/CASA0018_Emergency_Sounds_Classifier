@@ -152,6 +152,14 @@ All audio was resampled from 44.1kHz to 16kHz to match the Arduino microphone's 
 
 ## How to Reproduce
 
+### Option A: Use the pre-trained model (recommended)
+ 
+1. Download the pre-trained Arduino library from [`model/ei-emergencyvehiclesirens-arduino-1.0.1-impulse-6.zip`](model/ei-emergencyvehiclesirens-arduino-1.0.1-impulse-6.zip)
+2. In Arduino IDE, go to **Sketch → Include Library → Add .ZIP Library** and select the downloaded file
+3. Open `Siren_Classification/Siren_Classification.ino` and upload to the Arduino Nano 33 BLE Sense Lite
+
+### Option B: Retrain from scratch
+
 1. **Set up Edge Impulse project** — create a new project and select Arduino Nano 33 BLE Sense as the target device
 2. **Upload audio data** — use the Edge Impulse data acquisition tool or upload files directly; resample to 16kHz
 3. **Configure impulse** — set window size to 2000ms; select MFE feature extraction with default parameters (frame length 0.02, frame stride 0.01, 40 filters, FFT length 256, noise floor −52dB)
