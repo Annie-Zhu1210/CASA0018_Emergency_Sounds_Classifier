@@ -4,6 +4,10 @@
 
 A wearable wristband for deaf and hearing-impaired people that detects urban emergency sounds in real time and alerts the user through vibration patterns.
 
+<p align="center">
+  <img src="Images/Physical_Device.png" width="40%" alt="Wristband" /><br>
+</p>
+
 ---
 
 ## Overview
@@ -52,6 +56,11 @@ A confidence threshold of 0.70 is applied — the motor only activates when the 
 ## Enclosure
 
 Hardware is housed in a custom 3D-printed box attached to a fabric scrunchy to simulate a wristband. The base is 1mm thick to maximise vibration transmission. Two rectangular apertures allow USB-C charging access and slide switch operation. Four corner screws secure the lid.
+
+<p align="center">
+  <img src="Images/Enclosure.png" width="70%" alt="Enclosure 3D model" /><br>
+  <sub>Enclosure 3D model</sub>
+</p>
 
 ---
 
@@ -120,10 +129,22 @@ All audio was resampled from 44.1kHz to 16kHz to match the Arduino microphone's 
 ## Repository Structure
 
 ```
+├── Enclosure/
+│   └── Bottom.STL                 # Enclosure bottom part
+│   └── Top.STL                    # Enclosure top part
 ├── Siren_Classification/
 │   └── Siren_Classification.ino   # Arduino sketch (inference + vibration logic)
 ├── SampleData/
-│   └── ATTRIBUTIONS.md             # Full Freesound sample attribution
+│   └── ATTRIBUTIONS.md            # Full Freesound sample attribution
+│   └── BackgroundNoise/
+│   └── CarHorn/ 
+│   └── Sirens/
+│       └── Yelp/
+│       └── Wail/
+│       └── Hi-Lo/
+│       └── Phaser/
+├── model/
+│   └── ei-emergencyvehiclesirens-arduino-1.0.1-impulse-6.zip  # Trained model
 └── README.md
 ```
 
